@@ -1,0 +1,37 @@
+.auth-switch-nav{
+  display: flex;
+}
+
+.auth-switch-nav__item{
+  width: 50%;
+
+  &.auth-switch-nav__item-selected .auth-switch-nav__link{
+    background: #FFF;
+  }
+}
+
+.auth-switch-nav__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  text-align: center;
+  background: #f1f1f1;
+  color: #000;
+
+  &:hover{
+    color: #333;
+  }
+}
+
+.auth-switch-main{
+  padding: 20px 5px;
+}
+
+.auth-switch-main__item{
+  display: none;
+
+  &.auth-switch-main__item--selected{
+    display: block;
+  }
+}

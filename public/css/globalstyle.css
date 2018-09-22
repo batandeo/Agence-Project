@@ -1,0 +1,29 @@
+.app-sidebar {
+    background: #4e635f !important;
+}
+.app-content-top {
+    background: #57ac60 !important;
+}
+
+.app-sidebar-top {
+    background: -webkit-gradient(linear, left top, right top, from(#57ac60), to(#4e635f)) !important;
+
+}
+input.mydate {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    color: #495057;
+}
+
+strong.todaydate {
+    color: #c90035;
+}
+
+strong.pastdate {
+    color: #e0c279;
+}
+
+strong.futuredate {
+    color: #57ac60 !important;
+}
