@@ -31,6 +31,23 @@ Route::get('liste_dirigeants', 'ClientController@show_dirigeant');
 Route::get('update', 'ClientController@update');
 
 
+/* route employe*/
+Route::post('store', 'EmployeController@store');
+Route::get('show_emp', 'EmployeController@show');
+Route::delete('destroy_emp/{id}', 'EmployeController@destroy');
+Route::post('update_emp', 'EmployeController@update');
+Route::get('liste_employes', 'EmployeController@show');
+Route::get('liste_societe', 'EmployeController@show_societe');
+Route::get('update_emp', 'EmployeController@update');
+
+
+/* route societe*/
+Route::post('store_soc', 'SocieteController@store');
+Route::get('index', 'SocieteController@index');
+Route::delete('destroy_soc/{id}', 'SocieteController@destroy');
+Route::post('update_soc', 'SocieteController@update');
+
+
 /* route pour dirigeants */
 Route::post('destroy_diri/{id}', 'DirigeantController@destroy_diri');
 

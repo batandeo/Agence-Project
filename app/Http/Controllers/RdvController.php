@@ -37,12 +37,22 @@ class RdvController extends Controller
             'daterdv' => $request->daterdv,
             'dirigeant_id' => $request->dirigeant_id,
             'client_id' => $request->client_id,
-            $is_date = new Carbon($request->daterdv),
+            /*$to = \Carbon\Carbon::now(),
+        $from = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', '2018-05-14 14:21:53');
+        $diff_in_days = $to->diffInDays($from);*/
+
+           $is_date = new Carbon($request->daterdv),
             var_dump($is_date),
             'todaydate' => $is_date->isToday(),
             'pastdate' => $is_date->isPast(),
             'futuredate' => $is_date->isFuture()
         ]);
+           /* $is_date = new Carbon($request->daterdv),
+            var_dump($is_date),
+            'todaydate' => $is_date->isToday(),
+            'pastdate' => $is_date->isPast(),
+            'futuredate' => $is_date->isFuture()*/
+
         $rdv->client;
         $rdv->dirigeant;
 
@@ -72,10 +82,10 @@ class RdvController extends Controller
         $rdv->daterdv = $request->daterdv;
         $rdv->client_id = $request->client_id;
         $rdv->dirigeant_id = $request->dirigeant_id;
-     /*       $is_date = new Carbon($request->daterdv);
+           $is_date = new Carbon($request->daterdv);
             $rdv->todaydate = $is_date->isToday();
             $rdv->pastdate = $is_date->isPast();
-            $rdv->futuredate = $is_date->isFuture();*/
+            $rdv->futuredate = $is_date->isFuture();
         $rdv->save();
         $rdv->dirigeant;
         $rdv->client;
